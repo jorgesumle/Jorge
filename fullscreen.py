@@ -1,0 +1,23 @@
+#!/usr/bin/env python
+import pygame
+import sys
+from pygame.locals import *
+
+game_icon = pygame.image.load('icon.png')
+pygame.init()
+DISPLAYSURF = pygame.display.set_mode((200, 300))
+pygame.display.set_caption('Simple ventana')
+pygame.display.set_icon(game_icon)
+
+if pygame.display.get_driver()=='x11':
+    pygame.display.toggle_fullscreen()
+
+while True:
+    for event in pygame.event.get():
+        if event.type == QUIT:
+            pygame.quit()
+            sys.exit()
+
+
+    pygame.display.update()
+
