@@ -3,6 +3,7 @@ from pygame.locals import *
 import pygame
 import sys
 
+#Resolution
 HEIGHT = 700
 WIDTH = 700
 
@@ -16,12 +17,12 @@ GREEN = (0, 255, 0)
 #Creates the text
 font = pygame.font.Font('freesansbold.ttf', 22)
 fullscreen_str = 'Press F11 to change between full screen and normal mode'
-textSurface = font.render(fullscreen_str, True, WHITE, GREEN)
-textRect = textSurface.get_rect()
-textRect.center = (WIDTH / 2, HEIGHT / 2)
+text_surf = font.render(fullscreen_str, True, WHITE, GREEN)
+text_rect = text_surf.get_rect()
+text_rect.center = (WIDTH / 2, HEIGHT / 2)
 
 #Draws the text
-screen.blit(textSurface, textRect)
+screen.blit(text_surf, text_rect)
 
 fullscreen = False
 while True:
