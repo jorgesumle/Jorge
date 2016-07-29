@@ -1,6 +1,7 @@
 #!/usr/bin/env python
-import pygame
 from pygame.locals import *
+import pygame
+import sys
 
 HEIGHT = 700
 WIDTH = 700
@@ -14,23 +15,23 @@ GREEN = (0, 255, 0)
 
 #Creates the text
 font = pygame.font.Font('freesansbold.ttf', 22)
-textSurfaceObj = font.render('Press F11 to change between full screen and normal mode', True, WHITE, GREEN)
-textRectObj = textSurfaceObj.get_rect()
-textRectObj.center = (WIDTH / 2, HEIGHT / 2)
+fullscreen_str = 'Press F11 to change between full screen and normal mode'
+textSurface = font.render(fullscreen_str, True, WHITE, GREEN)
+textRect = textSurface.get_rect()
+textRect.center = (WIDTH / 2, HEIGHT / 2)
 
 #Draws the text
-screen.blit(textSurfaceObj, textRectObj)
+screen.blit(textSurface, textRect)
 
 fullscreen = False
-running = True
-while running:
+while True:
     for event in pygame.event.get():
         if event.type == QUIT:
             pygame.quit()
-            running = False
+            sys.exit()
         elif event.type == KEYDOWN:
             if event.key == K_F11:
-                if pygame.display.get_driver() == 'x11': 
+                if pygame.display.get_driver() == 'x11':
                     pygame.display.toggle_fullscreen()
                 else:
                     screen_copy = screen.copy()
@@ -41,6 +42,7 @@ while running:
                     fullscreen = not fullscreen
                     screen.blit(screen_copy, (0, 0))
             elif event.key == K_ESCAPE:
-                running = False
+                sys.exit()
+
     pygame.display.update()
 
