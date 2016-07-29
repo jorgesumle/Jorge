@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 from pygame.locals import *
 import pygame
-import sys
 
 pygame.init()
 
@@ -30,10 +29,11 @@ surface_rect = surface.get_rect()
 surface_rect.center = (WIDTH / 2, HEIGHT / 2)
 screen.blit(surface, surface_rect)
 
-while True:
+running = True
+while running:
+    pygame.display.update()
     for event in pygame.event.get():
         if event.type == QUIT:
             pygame.quit()
-            sys.exit()
-    pygame.display.update()
+            running = False
 

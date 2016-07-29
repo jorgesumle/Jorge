@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 from pygame.locals import *
 import pygame
-import sys
 
 #Resolution
 HEIGHT = 700
@@ -25,11 +24,13 @@ text_rect.center = (WIDTH / 2, HEIGHT / 2)
 screen.blit(text_surf, text_rect)
 
 fullscreen = False
-while True:
+running = True
+while running:
+    pygame.display.update()
     for event in pygame.event.get():
         if event.type == QUIT:
             pygame.quit()
-            sys.exit()
+            running = False
         elif event.type == KEYDOWN:
             if event.key == K_F11:
                 if pygame.display.get_driver() == 'x11':
@@ -43,7 +44,6 @@ while True:
                     fullscreen = not fullscreen
                     screen.blit(screen_copy, (0, 0))
             elif event.key == K_ESCAPE:
-                sys.exit()
+                running = False
 
-    pygame.display.update()
 
