@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from __init__ import WIDTH
+from main import WIDTH
 from pygame.locals import *
 import pygame
 

@@ -20,3 +20,6 @@ Just a transparent rectangle. There is some text behind it.
 ## Cat animation
 A walking cat. It never stops.
 ![A walking cat](https://notabug.org/jorgesumle/pygame_stuff/raw/master/snapshots/cat_animation.gif)
+## Jumping square
+A square that jumps when you press the up arrow key (UP).
+![A square that jumps](https://notabug.org/jorgesumle/pygame_stuff/raw/master/snapshots/jumping_square.gif)
