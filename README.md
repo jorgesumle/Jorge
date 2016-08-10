@@ -6,6 +6,7 @@ This repository contains several Pygame programs. Some of them are useful to reu
 2. [Full screen](#full-screen)
 3. [Transparent rectangle](#transparent-rectangle)
 4. [Cat animation](#cat-animation)
+5. [Jumping square](#jumping-square)
 
 ## Empty window
 Just a base Pygame window. It has an icon and a title, but it's empty.
