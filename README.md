@@ -5,7 +5,8 @@ code.
 # Games
 In this section, all the games are [listed](#index) and described. For
 instructions on how to run the games, read the
-[`src/README.md`](https://notabug.org/src/README.md) file.
+[`src/README.md`](http://notabug.org/jorgesumle/pygame_stuff/src/master/src/README.md)
+file.
 ## Index
 1. [Empty window](#empty-window)
 2. [Full screen](#full-screen)
