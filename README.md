@@ -1,6 +1,11 @@
 # Pygame snippets and random code
-This repository contains several Pygame programs. Some of them are useful to reuse and to extend, other are just text snippets with test code.
+This repository contains several Pygame games. Some of them are
+useful to reuse and to extend, other are just text snippets with test
+code.
 # Games
+In this section, all the games are [listed](#index) and described. For
+instructions on how to run the games, read the
+[`src/README.md`](https://notabug.org/src/README.md) file.
 ## Index
 1. [Empty window](#empty-window)
 2. [Full screen](#full-screen)
@@ -12,7 +17,9 @@ This repository contains several Pygame programs. Some of them are useful to reu
 Just a base Pygame window. It has an icon and a title, but it's empty.
 ![Empty window](https://notabug.org/jorgesumle/pygame_stuff/raw/master/snapshots/empty_window.png)
 ## Full screen
-A game in which you can toggle between normal and full screen mode pressing F11. The hardest part of the game comes when you're in full screen mode. You must exit this mode pressing the Escape button.
+A game in which you can toggle between normal and full screen mode
+pressing F11. The hardest part of the game comes when you're in full
+screen mode. You must exit this mode pressing the Escape button.
 ![Fullscreen (normal mode)](https://notabug.org/jorgesumle/pygame_stuff/raw/master/snapshots/full_screen-%28normal_mode%29.png)
 ![Fullscreen (fullscreen mode)](https://notabug.org/jorgesumle/pygame_stuff/raw/master/snapshots/full_screen-%28full_screen_%20mode%29.png)
 ## Transparent rectangle
