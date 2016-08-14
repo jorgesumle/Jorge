@@ -28,6 +28,11 @@ screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption('Jumping square')
 fps_clock = pygame.time.Clock()
 
+# Define the x coordinate (center) of the square. there is no need to update it
+# because the purpose of this program is to only make a square jump, there
+# are no horizontal movements.
+square_rect.centerx = int(x_pos)
+
 running = True
 while running:
 
@@ -43,9 +48,8 @@ while running:
             y_speed = 0
             y_pos = FLOOR_Y_POS
 
-    # Update square coordinates
+    # Update square y coordinate
     square_rect.bottom = int(y_pos)
-    square_rect.centerx = int(x_pos)
 
     screen.fill(WHITE)
     pygame.draw.rect(screen, BLUE, (0, 230, WIDTH, HEIGHT - 230)) # Floor
@@ -57,3 +61,4 @@ while running:
     for event in pygame.event.get():
         if event.type == QUIT:
             running = False
+
